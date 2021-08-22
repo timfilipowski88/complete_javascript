@@ -25,18 +25,24 @@ length of the array (because that's the number of elements)
 4.3. Call the function with the 'totals' array
 */
 
+// FIXME TODO BUG VIDEO LEC BL
+
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const totals = [];
 
 const calcTip = function (bill) {
-  return bill <= 50 && bill >= 300 ? bill * 0.15 : bill * 0.2; 
+  return bill <= 50 && bill >= 300 ? bill * 0.15 : bill * 0.2;
 };
 
 for (let bill = 0; bill < bills.length; bill++) {
   tips.push(calcTip(bills[bill]));
   totals.push(bills[bill] + tips[bill]);
-  console.log(`Bill ${bills.indexOf(bills[bill]) + 1} was $${bills[bill]}, plus a tip of $${tips[bill]} for a total of $${totals[bill]}`);
+  console.log(
+    `Bill ${bills.indexOf(bills[bill]) + 1} was $${
+      bills[bill]
+    }, plus a tip of $${tips[bill]} for a total of $${totals[bill]}`
+  );
 }
 console.log(bills);
 console.log(tips);
@@ -49,6 +55,6 @@ const calcAverage = function (arr) {
     sum += arr[i];
   }
   return sum / arr.length;
-}
-console.log('The average is ' + calcAverage(totals));
-console.log('The average is ' + calcAverage([3,3,3]));
+};
+console.log("The average is " + calcAverage(totals));
+console.log("The average is " + calcAverage([3, 3, 3]));
