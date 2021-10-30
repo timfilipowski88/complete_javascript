@@ -1,1 +1,3 @@
 'use strict';
+// Write some code write some code
+// Write more code, understand more code, fix code, write some more code
